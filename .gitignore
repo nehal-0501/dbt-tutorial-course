@@ -1,0 +1,7 @@
+/venv
+.user.yml
+/logs
+logs 
+credentials.json
+
+
