@@ -1,4 +1,7 @@
 /venv
 .user.yml
 /logs
-logs
+logs 
+credentials.json
+
+
