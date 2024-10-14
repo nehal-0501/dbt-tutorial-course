@@ -1,7 +1,10 @@
 /venv
 .user.yml
 /logs
-logs 
+logs
 credentials.json
+target/
+dbt_packages/
+
 
 
