@@ -1,0 +1,14 @@
+lessons:
+  outputs:
+    dev:
+      dataset: dbt_nsateesh
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: C:\Users\nehal.kumar\Desktop\DBT\dbt-tutorial-course\credentials.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: myd-dev-396904
+      threads: 64
+      type: bigquery
+  target: dev

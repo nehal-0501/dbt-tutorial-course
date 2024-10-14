@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_ecommerce__orders
+    description: "Table with one row per order"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: ""
+
+      - name: created_at
+        description: "When the order was created"
+
+      - name: returned_at
+        description: "When the order was returned"
+
+      - name: delivered_at
+        description: "When the order was delivered"
+
+      - name: shipped_at
+        description: "When the order was shipped"
+
+      - name: status
+        description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              name: unexpected_order_status # We can name our tests to make it easier to give more meaningful errors
+              values:
+                - Processing
+                - Cancelled
+                - Shipped
+                - Complete
+                - Returned
+              # quote: False If we were to prevent quote around boolean values like TRUE or FALSE we can set quote to False but by default it is set to TRUE
+
+
+      - name: num_items_ordered
+        description: "Number of items in the order"
