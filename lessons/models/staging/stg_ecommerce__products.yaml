@@ -27,6 +27,7 @@ models:
           - dbt_utils.expression_is_true:
               expression: ">= cost"
 
+
       - name: department
         description: "Whether the item is Menswear or Womenswear"
         tests:
